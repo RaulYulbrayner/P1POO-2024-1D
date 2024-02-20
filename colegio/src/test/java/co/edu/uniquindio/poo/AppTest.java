@@ -58,6 +58,27 @@ public class AppTest {
         LOG.info("Finalizacion datosVacios");
     }
 
+    /**
+     * Prueba para verificar que la edad de un estudiante no sea negativa
+     */
+    @Test
+    public void edadNegativa(){
+        LOG.info("Inicio prueba edadNegativa");
+        assertThrows(Throwable.class, ()-> new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co", "315635674", -18));
+        LOG.info("Finalizacion prueba edadNegativa");
+    }
+
+
+    /**
+     * Prueba para verificar el correo electronico de un estudiante este bueno
+     */
+    @Test
+    public void correoInvalido(){
+        LOG.info("Inicio prueba correoInvalido");
+        assertThrows(Throwable.class, ()-> new Estudiante("Camila", "Alzate Rios", "109453264", "camilauniquindio.edu.co", "315635674", 18));
+        LOG.info("Finalizacion prueba correoInvalido");
+    }
+
 
 
 }
