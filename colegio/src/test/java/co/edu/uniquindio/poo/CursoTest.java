@@ -1,9 +1,12 @@
 package co.edu.uniquindio.poo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.Collection;
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.junit.jupiter.api.Test;
@@ -68,6 +71,35 @@ public class CursoTest {
 
         LOG.info("Fin test verificarIdEstudiante");
     }
+
+    /**
+     * 
+     */
+    @Test
+    public void verificarEdadMayor(){
+        LOG.info("Inicio test verificarEdadMayor");
+
+        Curso curso = new Curso("Programación 1");
+
+        Estudiante estudiante1 = new Estudiante("Camila", "Alzate Rios", "109453264", "camila@uniquindio.edu.co", "315635674", 17);
+
+        Estudiante estudiante2 = new Estudiante("Raul", "Rivera", "164", "raul@uniquindio.edu.co", "315635674", 25);
+
+        Estudiante estudiante3 = new Estudiante("Juan", "Rivera", "1094564", "raul@uniquindio.edu.co", "315635674", 10);
+
+        Estudiante estudiante4 = new Estudiante("Ana", "Rivera", "109264", "raul@uniquindio.edu.co", "315635674", 35);
+
+        curso.agregarEstudiante(estudiante1);
+        curso.agregarEstudiante(estudiante2);
+        curso.agregarEstudiante(estudiante3);
+        curso.agregarEstudiante(estudiante4);
+
+        Collection<Estudiante> listaMenorEdad = List.of(estudiante1, estudiante3);
+        assertIterableEquals(listaMenorEdad, curso.obtenerMenorEdad());
+
+        LOG.info("Fin test verificarEdadMayor");
+    }
+
 
 
 

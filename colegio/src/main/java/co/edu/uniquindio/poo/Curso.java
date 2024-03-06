@@ -57,5 +57,16 @@ public class Curso {
     public Collection<Estudiante> getEstudiantes() {
         return estudiantes;
     }
+
+    public Collection<Estudiante> obtenerMenorEdad(){
+        Collection<Estudiante> listaEdadResultado = new LinkedList<>();
+        for(Estudiante estudiante: estudiantes){
+            if(estudiante.edad()<18){
+                listaEdadResultado.add(estudiante);
+            }
+        }
+        return listaEdadResultado;
+    }
+
     
 }
