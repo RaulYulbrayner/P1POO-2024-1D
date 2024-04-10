@@ -11,7 +11,7 @@ public class RectanguloTest {
     private static final Logger LOG = Logger.getLogger(AppTest.class.getName());
 
     /**
-    * 
+    * Prueba para verificar el areaRectanguloPositivo
     */
    @Test
    public void areaRectanguloPositivo() {
@@ -22,7 +22,7 @@ public class RectanguloTest {
    }
 
     /**
-    * 
+    * Prueba para verificar el areaRectanguloNegativo
     */
     @Test
     public void areaRectanguloNegativo() {
