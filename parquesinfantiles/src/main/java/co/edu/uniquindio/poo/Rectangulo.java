@@ -5,16 +5,16 @@ package co.edu.uniquindio.poo;
  */
 public class Rectangulo extends Figura {
 
-    private double alto, ancho;
+    private double lado, ancho;
 
     /**
      * Método constructor de la clase Rectangulo
      * @param ancho valor del ancho del rectángulo
      * @param alto valor del alto del rectángulo
      */
-    public Rectangulo(double ancho, double alto){
+    public Rectangulo(double ancho, double lado){
         this.ancho=ancho;
-        this.alto=alto;
+        this.lado=lado;
     }
 
     /**
@@ -23,16 +23,16 @@ public class Rectangulo extends Figura {
      */
     public double calcularArea(){
         assert ancho >= 0;
-        assert alto >= 0;
-        return alto * ancho;
+        assert lado >= 0;
+        return lado * ancho;
     }
 
     /**
      * Método para obtener el valor del alto del rectángulo
      * @return valor del alto del rectángulo
      */
-    public double getAlto() {
-        return alto;
+    public double getLado() {
+        return lado;
     }
 
     /**
