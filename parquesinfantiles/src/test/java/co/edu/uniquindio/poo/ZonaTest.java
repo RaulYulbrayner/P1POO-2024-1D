@@ -34,7 +34,7 @@ public class ZonaTest {
  
        Zona zona = new Zona("Zona1", Material.GRAMANATURAL, new Cuadrado(10));
  
-       assertEquals(3141592.65, zona.calcularCosto(), App.PRECISION);
+       assertEquals(2000000, zona.calcularCosto(), App.PRECISION);
  
        LOG.info("Finalizando test valorZonaCuadradoGramaNatural");
     }
