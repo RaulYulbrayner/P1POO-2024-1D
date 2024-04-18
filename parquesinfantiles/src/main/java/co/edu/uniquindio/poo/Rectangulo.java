@@ -13,6 +13,8 @@ public class Rectangulo extends Figura {
      * @param alto valor del alto del rectángulo
      */
     public Rectangulo(double ancho, double lado){
+        assert ancho >= 0;
+        assert lado >= 0;
         this.ancho=ancho;
         this.lado=lado;
     }
