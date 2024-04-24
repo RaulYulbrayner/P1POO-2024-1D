@@ -32,7 +32,7 @@ public class ZonaTest {
     public void valorZonaCuadradoGramaNatural() {
        LOG.info("Iniciado test valorZonaCuadradoGramaNatural");
  
-       Zona zona = new Zona("Zona1", Material.GRAMANATURAL, new Cuadrado(10));
+       var zona = new Zona("Zona1", Material.GRAMANATURAL, new Cuadrado(10));
  
        assertEquals(2000000, zona.calcularCosto(), App.PRECISION);
  
