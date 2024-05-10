@@ -2,7 +2,7 @@ package co.edu.uniquindio.poo;
 
 import java.util.Scanner;
 
-public class Granja {
+public class Zoologico {
 
     private static Scanner scanner = new Scanner(System.in);
 
